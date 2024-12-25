@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Olympiad Wind Power Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            margin-bottom: 10px;
+        }
+        .answer {
+            margin-top: 10px;
+            display: none;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+        }
+        .show-answer {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .show-answer:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Science Olympiad: Wind Power Quiz</h1>
+        <p>Test your knowledge about wind energy!</p>
+    </header>
+    <main>
+        <div class="question">
+            <h2>Question 1: What is the primary factor that determines the energy output of a wind turbine?</h2>
+            <button class="show-answer">Show Answer</button>
+            <div class="answer">The primary factor is the wind speed, as power output increases with the cube of wind speed.</div>
+        </div>
+        <div class="question">
+            <h2>Question 2: What is the term for the maximum efficiency limit of a wind turbine?</h2>
+            <button class="show-answer">Show Answer</button>
+            <div class="answer">This is known as the Betz Limit, which states that no wind turbine can capture more than 59.3% of the kinetic energy in wind.</div>
+        </div>
+        <div class="question">
+            <h2>Question 3: What is the role of the nacelle in a wind turbine?</h2>
+            <button class="show-answer">Show Answer</button>
+            <div class="answer">The nacelle houses the generator, gearbox, and other essential components of the wind turbine.</div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.show-answer').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
